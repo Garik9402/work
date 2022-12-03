@@ -1,0 +1,106 @@
+@import 'mixin.scss';
+
+::-webkit-scrollbar {
+   width: 20px;
+}
+
+::-webkit-scrollbar-track {
+   width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+   width: 10px;
+   height: 40px;
+   background-color: beige;
+   border-radius: 6px;
+   transition: all 0.3s ease-in;
+}
+
+
+
+.header {
+   width: 100%;
+
+   &__inner {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+   }
+
+   &__items {
+      width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #000;
+      height: 1024px;
+      overflow: scroll;
+
+      &::-webkit-scrollbar {
+         width: 20px;
+      }
+
+      &::-webkit-scrollbar-track {
+         // width: 20px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+         // width: 10px;
+         // max-height: 10px;
+         // background-color: beige;
+         // border-radius: 6px;
+      }
+   }
+
+
+   &__titles {}
+
+   &__price {}
+
+   &__colors {
+      width: 20px;
+      height: 20px;
+      display: flex;
+   }
+}
+
+.color {
+   width: 20px;
+   height: 20px;
+}
+
+.list {
+   height: 100px;
+   margin-top: 10px;
+   border: 1px solid #000;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &:first-child {
+      background-color: aqua;
+   }
+}
+
+.checkbox {
+   text-decoration: li;
+   display: inline;
+}
+
+.para {
+   margin-bottom: 30px;
+}
+
+.button {
+   border-radius: 5px;
+   padding: 10px;
+   display: inline-block;
+   background-color: orange;
+   text-decoration: none;
+   box-shadow: 1px 2px 3px 2px;
+   transform: rotate(360deg);
+
+   &:hover {}
+}
