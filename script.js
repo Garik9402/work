@@ -9,15 +9,15 @@ window.addEventListener('touchmove', (e) => {
          clientY = e.touches[0].clientY;
          parent.style.top = clientY + 'px'
          let dpx = 0
-         if ((clientY < dpx)) {
-         }
+         // if ((clientY < dpx)) {
+         // }
          let hg = 200
-         if ((clientY > 200)) {
+         if ((clientY > hg)) {
             parent.classList.add('button-w--transform')
          }
+         console.log(clientY)
       }
    })
-   console.log(clientY)
 })
 
 

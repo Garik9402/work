@@ -1,5 +1,9 @@
 @import 'mixin.scss';
 
+body {
+   overflow-y: hidden;
+}
+
 ::-webkit-scrollbar {
    width: 20px;
 }
