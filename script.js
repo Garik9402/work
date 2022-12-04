@@ -1,23 +1,19 @@
 
 
-const src = document.querySelectorAll(".button")
+const src = document.querySelector(".popup__line")
 let clientY
 window.addEventListener('touchmove', (e) => {
-   src.forEach(src => {
-      if (src.contains(e.target)) {
-         let parent = src.closest('.button-w')
-         clientY = e.touches[0].clientY;
-         parent.style.top = clientY + 'px'
-         let dpx = 0
-         // if ((clientY < dpx)) {
-         // }
-         let hg = 200
-         if ((clientY > hg)) {
-            parent.classList.add('button-w--transform')
-         }
-         console.log(clientY)
+   if (src.contains(e.target)) {
+      let parent = src.closest('.popup__body')
+      console.log(parent)
+      clientY = e.touches[0].clientY;
+      parent.style.top = clientY + 'px'
+      let hg = 700
+      if ((clientY > hg)) {
+         parent.classList.add('popup__body--js-active')
       }
-   })
+      console.log(clientY)
+   }
 })
 
 

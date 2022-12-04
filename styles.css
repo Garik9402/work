@@ -4,34 +4,21 @@
   box-sizing: border-box;
 }
 
-.header {
-  width: 100px;
-  height: 100px;
-}
-
 body {
-  overflow-y: hidden;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-::-webkit-scrollbar-track {
-  width: 20px;
-}
-
-::-webkit-scrollbar-thumb {
-  width: 10px;
-  height: 40px;
-  background-color: beige;
-  border-radius: 6px;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+.wrapper-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .header {
   width: 100%;
+  padding: 10px;
 }
 .header__inner {
   max-width: 1200px;
@@ -46,38 +33,7 @@ body {
   flex-direction: column;
   align-items: center;
   border: 1px solid #000;
-  overflow: scroll;
-}
-.header__items::-webkit-scrollbar {
-  width: 20px;
-}
-.header__colors {
-  width: 20px;
-  height: 20px;
-  display: flex;
-}
-
-.color {
-  width: 20px;
-  height: 20px;
-}
-
-.list {
-  height: 100px;
-  margin-top: 10px;
-  border: 1px solid #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.list:first-child {
-  background-color: aqua;
-}
-
-.checkbox {
-  -webkit-text-decoration: li;
-          text-decoration: li;
-  display: inline;
+  padding: 10px;
 }
 
 .para {
@@ -106,4 +62,47 @@ body {
   text-decoration: none;
   box-shadow: 1px 2px 3px 2px;
   transform: rotate(360deg);
+}
+.popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.6786064768);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 10;
+}
+.popup__body {
+  position: absolute;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  transform: translateY(0%);
+}
+.popup__body--js-active {
+  transform: translateY(150%);
+  transition: all 0.3s;
+}
+.popup__inner {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px 0px;
+  background-color: white;
+}
+.popup__line {
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  background: red;
+  margin-bottom: 20px;
+  left: 50%;
+  border-radius: 10px;
+}
+.popup__menu {
+  padding: 10px;
+  margin-top: 20px;
 }
