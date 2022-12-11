@@ -39,10 +39,38 @@
 
 
 
+document.querySelector('.btn').addEventListener('click', funcApp)
+function funcApp() {
+   const contentNode = document.querySelector('.content__inner')
+   const checkboxMain = document.querySelector('.main-checkbox')
+   const cardCheck = document.querySelectorAll('.card__real-checkbox')
+   checkboxMain.addEventListener('click', function () {
+      if (checkboxMain.checked == true) {
+         cardCheck.forEach(e => {
+            e.checked = true
+         })
+      }
+      if (checkboxMain.checked == false) {
+         cardCheck.forEach(e => {
+            e.checked = false
+         })
+      }
 
+   })
+   cardCheck.forEach(el => {
+      if (el.checked == true) {
+         let card = el.closest('.card')
+         card.remove()
+      }
+   })
+   cardCheck.forEach(el => {
+      el.addEventListener('click', () => {
+         checkboxMain.checked = false
 
-
-
+      })
+   })
+}
+funcApp()
 
 
 

@@ -22,14 +22,13 @@ body {
       width: 100%;
       margin: 0 auto;
       display: flex;
-      justify-content: center;
    }
 
    &__items {
-      width: 600px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 10px;
       border: 1px solid #000;
       padding: 10px;
 
@@ -126,4 +125,79 @@ body {
       padding: 10px;
       margin-top: 20px;
    }
+}
+
+.card {
+   padding: 10px;
+   border: 1px solid #000;
+
+   &__checkbox-w {
+      display: flex;
+      align-items: center;
+   }
+
+   &__real-checkbox {
+      width: 0;
+      height: 0;
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+   }
+
+   &__real-checkbox:checked+&__castum-checkbox {
+      position: relative;
+      background-color: orange;
+
+      &::before {
+         content: '';
+         position: absolute;
+         display: inline-block;
+         width: 13px;
+         height: 13px;
+         background-image: url(/Vector\ 2.12.svg);
+         background-repeat: no-repeat;
+         background-size: contain;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%) scale(1);
+      }
+   }
+
+   &__castum-checkbox {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 1px solid #000;
+
+      &::before {
+         content: '';
+         position: absolute;
+         display: inline-block;
+         width: 13px;
+         height: 13px;
+         background-image: url(/Vector\ 2.12.svg);
+         background-repeat: no-repeat;
+         background-size: contain;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%) scale(0);
+         transition: all 0.1s ease-in;
+      }
+   }
+}
+
+label {
+   width: 20px;
+   height: 20px;
+}
+
+button {
+   width: 100px;
+   height: 30px;
+}
+
+.main-checkbox {
+   width: 20px;
+   height: 20px;
 }
