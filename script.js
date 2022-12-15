@@ -72,9 +72,112 @@ function funcApp() {
 }
 funcApp()
 
+const cardsNode = document.querySelector('.header__items')
+const btnInvi = document.querySelector('.button-invitation')
+const btnView = document.querySelector('.button-no-view')
+const btnNoView = document.querySelector('.button-view')
+const btnRefusal = document.querySelector('.button-refusal')
+const cardNode = document.querySelectorAll('.card')
+btnInvi.addEventListener('click', funcDataDesc)
+function funcDataDesc() {
+   const cardsNode = document.querySelector('.header__items')
+   let items = cardsNode.childNodes;
+   let itemsArr = [];
+   for (let i in items) {
+      if (items[i].nodeType == 1) {
+         itemsArr.push(items[i]);
+      }
+   }
+   itemsArr.sort(function (a, b) {
+      return parseFloat(a.getAttribute('data-refusal')) == parseFloat(b.getAttribute('data-refusal')) ?
+         0 :
+         (parseFloat(a.getAttribute('data-refusal')) < parseFloat(b.getAttribute('data-refusal')) ? 1 : -1);
+   });
+   for (let i = 0; i < itemsArr.length; ++i) {
+      if (itemsArr[i].hasAttribute('data-refusal')) {
+         cardsNode.insertBefore(itemsArr[i], cardsNode.firstChild)
+      }
+   }
+}
+
+btnInvi.addEventListener('click', funcDataDesс)
+function funcDataDesс() {
+   let contI = document.querySelector('.content__inner')
+   let items = contI.childNodes;
+   let itemsArr = [];
+   for (let i in items) {
+      if (items[i].nodeType == 1) {
+         itemsArr.push(items[i]);
+      }
+   }
+   itemsArr.sort(function (a, b) {
+      return parseFloat(a.getAttribute('data-refusal')) == parseFloat(b.getAttribute('data-refusal')) ?
+         0 :
+         (parseFloat(a.getAttribute('data-refusal')) < parseFloat(b.getAttribute('data-refusal')) ? 1 : -1);
+   });
+   for (let i = 0; i < itemsArr.length; ++i) {
+      if (itemsArr[i].hasAttribute('data-refusal')) {
+         contI.insertBefore(itemsArr[i], contI.firstChild)
+      }
+   }
+}
+
+
+btnRefusal.addEventListener('click', funcSort)
+console.log(btnRefusal)
+function funcSort() {
+   const cardsNode = document.querySelector('.header__items')
+   let items = cardsNode.childNodes;
+   let itemsArr = [];
+   for (let i in items) {
+      if (items[i].nodeType == 1) {
+         itemsArr.push(items[i]);
+      }
+   }
+   itemsArr.sort(function (a, b) {
+      return parseFloat(a.getAttribute('data-id')) == parseFloat(b.getAttribute('data-id')) ?
+         0 :
+         (parseFloat(a.getAttribute('data-id')) > parseFloat(b.getAttribute('data-id')) ? 1 : -1);
+   });
+   for (let i = 0; i < itemsArr.length; ++i) {
+      cardsNode.appendChild(itemsArr[i]);
+   }
+}
+// child.forEach(el => {
+//    if (el.hasAttribute('data-refusal')) {
+//       console.log(el)
+//       gh.push(el)
+//       gh.reverse()
+
+//       cardsNode.insertBefore(el, cardsNode.firstChild)
+
+//    }
 
 
 
+// const dataInc = document.getElementById('data-increase').addEventListener('click', funcDataInc)
+// const dataDesc = document.getElementById('data-descending').addEventListener('click', funcDataDesc)
 
-
-
+// function funcDataInc() {
+//    // let activedNode = document.querySelector('#actived')
+//    const cardsNode = document.querySelector('.header__items')
+//    card.forEach(el)
+// }
+// function funcDataDesc() {
+//    let activedNode = document.querySelector('#actived')
+//    let items = activedNode.childNodes;
+//    let itemsArr = [];
+//    for (let i in items) {
+//       if (items[i].nodeType == 1) {
+//          itemsArr.push(items[i]);
+//       }
+//    }
+//    itemsArr.sort(function (a, b) {
+//       return parseFloat(a.getAttribute('data-id')) == parseFloat(b.getAttribute('data-id')) ?
+//          0 :
+//          (parseFloat(a.getAttribute('data-id')) > parseFloat(b.getAttribute('data-id')) ? 1 : -1);
+//    });
+//    for (let i = 0; i < itemsArr.length; ++i) {
+//       activedNode.appendChild(itemsArr[i]);
+//    }
+// }

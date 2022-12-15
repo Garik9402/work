@@ -14,16 +14,23 @@
       <div class="header">
          <div class="header__inner">
             <input class="main-checkbox" type="checkbox">
-            <button class="btn">удалить</button>
+            <div class="buttons-w">
+               <button class="btn">удалить</button>
+               <button class="button-invitation">Приглашение</button>
+               <button class="button-view"> просмотрено</button>
+               <button class="button-no-view">Не просмотрено</button>
+               <button class="button-refusal">отказ</button>
+            </div>
             <div class="header__items">
-               <div class="header__card card">
+               <div data-id="0" data-invitation class="header__card card">
                   <div class="card__checkbox-w">
                      <label>
                         <input class="card__real-checkbox" type="checkbox">
                         <span class="card__castum-checkbox"></span>
                      </label>
                   </div>
-                  <p class="card paragraf">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis nulla recusandae
+                  <p class="card paragraf">Приглашение Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis
+                     nulla recusandae
                      repellendus assumenda, neque, magni praesentium quam provident rem!
                      Mollitia, veritatis voluptatem. Officia sapiente quae itaque reprehenderit culpa mollitia perferendis! Incidunt voluptatem accusantium, atque dolorem illum odio quam dignissimos
                      eum enim, saepe explicabo harum hic quibusdam, aperiam quia sed?
@@ -33,14 +40,15 @@
                      quasi cupiditate, sequi quibusdam? Ad.</p>
                   <button>sdfddsfssdf</button>
                </div>
-               <div class="header__card card">
+               <div data-id="1" data-refusal="0" class="header__card card">
                   <div class="card__checkbox-w">
                      <label>
                         <input class="card__real-checkbox" type="checkbox">
                         <span class="card__castum-checkbox"></span>
                      </label>
                   </div>
-                  <p class="card paragraf">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis nulla recusandae
+                  <p class="card paragraf">1Отказ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis nulla
+                     recusandae
                      repellendus assumenda, neque, magni praesentium quam provident rem!
                      Mollitia, veritatis voluptatem. Officia sapiente quae itaque reprehenderit culpa mollitia perferendis! Incidunt voluptatem accusantium, atque dolorem illum odio quam dignissimos
                      eum enim, saepe explicabo harum hic quibusdam, aperiam quia sed?
@@ -50,14 +58,15 @@
                      quasi cupiditate, sequi quibusdam? Ad.</p>
                   <button>sdfddsfssdf</button>
                </div>
-               <div class="header__card card">
+               <div data-id="2" data-refusal="1" class="header__card card">
                   <div class="card__checkbox-w">
                      <label>
                         <input class="card__real-checkbox" type="checkbox">
                         <span class="card__castum-checkbox"></span>
                      </label>
                   </div>
-                  <p class="card paragraf">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis nulla recusandae
+                  <p class="card paragraf">2 Отказ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis nulla
+                     recusandae
                      repellendus assumenda, neque, magni praesentium quam provident rem!
                      Mollitia, veritatis voluptatem. Officia sapiente quae itaque reprehenderit culpa mollitia perferendis! Incidunt voluptatem accusantium, atque dolorem illum odio quam dignissimos
                      eum enim, saepe explicabo harum hic quibusdam, aperiam quia sed?
@@ -67,14 +76,53 @@
                      quasi cupiditate, sequi quibusdam? Ad.</p>
                   <button>sdfddsfssdf</button>
                </div>
-               <div class="header__card card">
+               <div data-id="3" data-status="invitation" class="header__card card">
                   <div class="card__checkbox-w">
                      <label>
                         <input class="card__real-checkbox" type="checkbox">
                         <span class="card__castum-checkbox"></span>
                      </label>
                   </div>
-                  <p class="card__paragraf">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis nulla
+                  <p class="card__paragraf">Приглашение Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis
+                     nulla
+                     recusandae
+                     repellendus assumenda, neque, magni praesentium quam provident rem!
+                     Mollitia, veritatis voluptatem. Officia sapiente quae itaque reprehenderit culpa mollitia perferendis! Incidunt voluptatem accusantium, atque dolorem illum odio quam dignissimos
+                     eum enim, saepe explicabo harum hic quibusdam, aperiam quia sed?
+                     Error, accusamus esse magni ipsum corporis perspiciatis. Aliquid, dolorum quaerat. Illum, quas voluptates veritatis animi dolorem nihil excepturi ducimus sit doloribus accusamus
+                     dolore quibusdam explicabo possimus exercitationem culpa itaque enim?
+                     Hic nisi impedit aliquid. Perferendis officiis enim ipsum nostrum quae, hic magnam quisquam nulla omnis quia ab, necessitatibus molestias amet facere eveniet molestiae sit quo
+                     quasi cupiditate, sequi quibusdam? Ad.</p>
+                  <button>sdfddsfssdf</button>
+               </div>
+               <div data-id="4" data-status='not-viewed' class="header__card card">
+                  <div class="card__checkbox-w">
+                     <label>
+                        <input class="card__real-checkbox" type="checkbox">
+                        <span class="card__castum-checkbox"></span>
+                     </label>
+                  </div>
+                  <p class="card__paragraf">Не просмотрено Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis
+                     nulla
+                     recusandae
+                     repellendus assumenda, neque, magni praesentium quam provident rem!
+                     Mollitia, veritatis voluptatem. Officia sapiente quae itaque reprehenderit culpa mollitia perferendis! Incidunt voluptatem accusantium, atque dolorem illum odio quam dignissimos
+                     eum enim, saepe explicabo harum hic quibusdam, aperiam quia sed?
+                     Error, accusamus esse magni ipsum corporis perspiciatis. Aliquid, dolorum quaerat. Illum, quas voluptates veritatis animi dolorem nihil excepturi ducimus sit doloribus accusamus
+                     dolore quibusdam explicabo possimus exercitationem culpa itaque enim?
+                     Hic nisi impedit aliquid. Perferendis officiis enim ipsum nostrum quae, hic magnam quisquam nulla omnis quia ab, necessitatibus molestias amet facere eveniet molestiae sit quo
+                     quasi cupiditate, sequi quibusdam? Ad.</p>
+                  <button>sdfddsfssdf</button>
+               </div>
+               <div data-id="5" data-status='not-viewed' class="header__card card">
+                  <div class="card__checkbox-w">
+                     <label>
+                        <input class="card__real-checkbox" type="checkbox">
+                        <span class="card__castum-checkbox"></span>
+                     </label>
+                  </div>
+                  <p class="card__paragraf">Не просмотрено Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis
+                     nulla
                      recusandae
                      repellendus assumenda, neque, magni praesentium quam provident rem!
                      Mollitia, veritatis voluptatem. Officia sapiente quae itaque reprehenderit culpa mollitia perferendis! Incidunt voluptatem accusantium, atque dolorem illum odio quam dignissimos
@@ -90,7 +138,98 @@
       </div>
       <section id="content">
          <div class="content__inner">
-
+            <div data-id="4" data-status='not-viewed' class="header__card card">
+               <div class="card__checkbox-w">
+                  <label>
+                     <input class="card__real-checkbox" type="checkbox">
+                     <span class="card__castum-checkbox"></span>
+                  </label>
+               </div>
+               <p class="card__paragraf">Не просмотрено Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis
+                  nulla
+                  recusandae
+                  repellendus assumenda, neque, magni praesentium quam provident rem!
+                  Mollitia, veritatis voluptatem. Officia sapiente quae itaque reprehenderit culpa mollitia perferendis! Incidunt voluptatem accusantium, atque dolorem illum odio quam dignissimos
+                  eum enim, saepe explicabo harum hic quibusdam, aperiam quia sed?
+                  Error, accusamus esse magni ipsum corporis perspiciatis. Aliquid, dolorum quaerat. Illum, quas voluptates veritatis animi dolorem nihil excepturi ducimus sit doloribus accusamus
+                  dolore quibusdam explicabo possimus exercitationem culpa itaque enim?
+                  Hic nisi impedit aliquid. Perferendis officiis enim ipsum nostrum quae, hic magnam quisquam nulla omnis quia ab, necessitatibus molestias amet facere eveniet molestiae sit quo
+                  quasi cupiditate, sequi quibusdam? Ad.</p>
+               <button>sdfddsfssdf</button>
+            </div>
+            <div data-id="4" data-status='not-viewed' class="header__card card">
+               <div class="card__checkbox-w">
+                  <label>
+                     <input class="card__real-checkbox" type="checkbox">
+                     <span class="card__castum-checkbox"></span>
+                  </label>
+               </div>
+               <p class="card__paragraf">Не просмотрено Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis
+                  nulla
+                  recusandae
+                  repellendus assumenda, neque, magni praesentium quam provident rem!
+                  Mollitia, veritatis voluptatem. Officia sapiente quae itaque reprehenderit culpa mollitia perferendis! Incidunt voluptatem accusantium, atque dolorem illum odio quam dignissimos
+                  eum enim, saepe explicabo harum hic quibusdam, aperiam quia sed?
+                  Error, accusamus esse magni ipsum corporis perspiciatis. Aliquid, dolorum quaerat. Illum, quas voluptates veritatis animi dolorem nihil excepturi ducimus sit doloribus accusamus
+                  dolore quibusdam explicabo possimus exercitationem culpa itaque enim?
+                  Hic nisi impedit aliquid. Perferendis officiis enim ipsum nostrum quae, hic magnam quisquam nulla omnis quia ab, necessitatibus molestias amet facere eveniet molestiae sit quo
+                  quasi cupiditate, sequi quibusdam? Ad.</p>
+               <button>sdfddsfssdf</button>
+            </div>
+            <div data-id="1" data-refusal="2" class="header__card card">
+               <div class="card__checkbox-w">
+                  <label>
+                     <input class="card__real-checkbox" type="checkbox">
+                     <span class="card__castum-checkbox"></span>
+                  </label>
+               </div>
+               <p class="card paragraf">3Отказ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis nulla
+                  recusandae
+                  repellendus assumenda, neque, magni praesentium quam provident rem!
+                  Mollitia, veritatis voluptatem. Officia sapiente quae itaque reprehenderit culpa mollitia perferendis! Incidunt voluptatem accusantium, atque dolorem illum odio quam dignissimos
+                  eum enim, saepe explicabo harum hic quibusdam, aperiam quia sed?
+                  Error, accusamus esse magni ipsum corporis perspiciatis. Aliquid, dolorum quaerat. Illum, quas voluptates veritatis animi dolorem nihil excepturi ducimus sit doloribus accusamus
+                  dolore quibusdam explicabo possimus exercitationem culpa itaque enim?
+                  Hic nisi impedit aliquid. Perferendis officiis enim ipsum nostrum quae, hic magnam quisquam nulla omnis quia ab, necessitatibus molestias amet facere eveniet molestiae sit quo
+                  quasi cupiditate, sequi quibusdam? Ad.</p>
+               <button>sdfddsfssdf</button>
+            </div>
+            <div data-id="2" data-refusal="3" class="header__card card">
+               <div class="card__checkbox-w">
+                  <label>
+                     <input class="card__real-checkbox" type="checkbox">
+                     <span class="card__castum-checkbox"></span>
+                  </label>
+               </div>
+               <p class="card paragraf">4Отказ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis nulla
+                  recusandae
+                  repellendus assumenda, neque, magni praesentium quam provident rem!
+                  Mollitia, veritatis voluptatem. Officia sapiente quae itaque reprehenderit culpa mollitia perferendis! Incidunt voluptatem accusantium, atque dolorem illum odio quam dignissimos
+                  eum enim, saepe explicabo harum hic quibusdam, aperiam quia sed?
+                  Error, accusamus esse magni ipsum corporis perspiciatis. Aliquid, dolorum quaerat. Illum, quas voluptates veritatis animi dolorem nihil excepturi ducimus sit doloribus accusamus
+                  dolore quibusdam explicabo possimus exercitationem culpa itaque enim?
+                  Hic nisi impedit aliquid. Perferendis officiis enim ipsum nostrum quae, hic magnam quisquam nulla omnis quia ab, necessitatibus molestias amet facere eveniet molestiae sit quo
+                  quasi cupiditate, sequi quibusdam? Ad.</p>
+               <button>sdfddsfssdf</button>
+            </div>
+            <div data-id="2" data-refusal="4" class="header__card card">
+               <div class="card__checkbox-w">
+                  <label>
+                     <input class="card__real-checkbox" type="checkbox">
+                     <span class="card__castum-checkbox"></span>
+                  </label>
+               </div>
+               <p class="card paragraf">5Отказ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel vitae odit ipsa et possimus nobis modi excepturi dolorem voluptas perspiciatis nulla
+                  recusandae
+                  repellendus assumenda, neque, magni praesentium quam provident rem!
+                  Mollitia, veritatis voluptatem. Officia sapiente quae itaque reprehenderit culpa mollitia perferendis! Incidunt voluptatem accusantium, atque dolorem illum odio quam dignissimos
+                  eum enim, saepe explicabo harum hic quibusdam, aperiam quia sed?
+                  Error, accusamus esse magni ipsum corporis perspiciatis. Aliquid, dolorum quaerat. Illum, quas voluptates veritatis animi dolorem nihil excepturi ducimus sit doloribus accusamus
+                  dolore quibusdam explicabo possimus exercitationem culpa itaque enim?
+                  Hic nisi impedit aliquid. Perferendis officiis enim ipsum nostrum quae, hic magnam quisquam nulla omnis quia ab, necessitatibus molestias amet facere eveniet molestiae sit quo
+                  quasi cupiditate, sequi quibusdam? Ad.</p>
+               <button>sdfddsfssdf</button>
+            </div>
          </div>
 
       </section>
